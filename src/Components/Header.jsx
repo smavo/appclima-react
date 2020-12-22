@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
-
+import PropTypes from 'prop-types';
 
 function Header({ titulo }) {
     return (
         <Fragment>
-            
+
             <nav>
                 <div className="nav-wrapper teal darken-1">
                     <a href="#!" className="brand-logo">{titulo}</a>
@@ -17,6 +17,10 @@ function Header({ titulo }) {
             </nav>
         </Fragment>
     )
+}
+
+Header.propTypes = {
+    titulo: PropTypes.string.isRequired
 }
 
 export default Header

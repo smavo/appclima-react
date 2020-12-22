@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import Error from './Error';
-
+import PropTypes from 'prop-types';
 
 function Form({ busqueda, setBusqueda, setConsulta }) {
 
@@ -75,14 +75,20 @@ function Form({ busqueda, setBusqueda, setConsulta }) {
 
                 <div className="input-field col s12">
                     <button type="submit"
-                            className="btn-large btn-block grey darken-1"
-                        > Buscar Clima
+                        className="btn-large btn-block grey darken-1"
+                    > Buscar Clima
                     </button>
                 </div>
-                
+
             </form>
         </Fragment>
     )
+}
+
+Form.propTypes = {
+    busqueda: PropTypes.object.isRequired,
+    setBusqueda: PropTypes.func.isRequired,
+    setConsulta: PropTypes.func.isRequired,
 }
 
 export default Form

@@ -1,6 +1,7 @@
-import React,{ Fragment } from 'react'
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types';
 
-function Error({mensaje}) {
+function Error({ mensaje }) {
     return (
         <Fragment>
             <p className="red darken-4 error">{mensaje}</p>
@@ -8,4 +9,8 @@ function Error({mensaje}) {
     )
 }
 
-export default Error
+Error.propTypes = {
+    mensaje: PropTypes.string.isRequired
+}
+
+export default Error;
